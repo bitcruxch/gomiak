@@ -54,14 +54,14 @@ type SubscriberFilter struct {
 type CreateSubscriberRequest struct {
 	Email  string            `json:"email"`
 	Status string            `json:"status,omitempty"`
-	Groups []string          `json:"groups,omitempty"`
+	Groups []any             `json:"groups,omitempty"`
 	Fields map[string]string `json:"fields,omitempty"`
 }
 
 // UpdateSubscriberRequest is the request body for updating a subscriber.
 type UpdateSubscriberRequest struct {
 	Status string            `json:"status,omitempty"`
-	Groups []string          `json:"groups,omitempty"`
+	Groups []any             `json:"groups,omitempty"`
 	Fields map[string]string `json:"fields,omitempty"`
 }
 
@@ -75,7 +75,7 @@ type BulkDeleteSubscribersRequest struct {
 // AssignSubscribersRequest is the request body for assigning subscribers to groups.
 type AssignSubscribersRequest struct {
 	Select  *Selection        `json:"select"`
-	Groups  []string          `json:"groups,omitempty"`
+	Groups  []any             `json:"groups,omitempty"`
 	Filter  *SubscriberFilter `json:"filter,omitempty"`
 	Segment string            `json:"segment,omitempty"`
 }
@@ -111,7 +111,7 @@ type FilterSubscribersRequest struct {
 // ImportSubscribersRequest is the request body for importing subscribers.
 type ImportSubscribersRequest struct {
 	Fields        []string `json:"fields"`
-	Groups        []string `json:"groups,omitempty"`
+	Groups        []any    `json:"groups,omitempty"`
 	UploadID      int      `json:"upload_id,omitempty"`
 	IPDUUID       string   `json:"ipd_uuid,omitempty"`
 	ReplaceFields *bool    `json:"replace_fields,omitempty"`
