@@ -87,13 +87,13 @@ func (gs *GroupService) ListSubscribers(ctx context.Context, id int, opts *gomia
 }
 
 // AssignSubscribers assigns subscribers to a group by their IDs.
-func (gs *GroupService) AssignSubscribers(ctx context.Context, groupID int, req *GroupAssignRequest) ([]Subscriber, error) {
-	data, _, err := gomiak.Do[[]Subscriber](ctx, gs.s.client, http.MethodPost, fmt.Sprintf("%s/groups/%d/subscribers/assign", gs.s.basePath, groupID), nil, req)
+func (gs *GroupService) AssignSubscribers(ctx context.Context, groupID int, req *GroupAssignRequest) (bool, error) {
+	data, _, err := gomiak.Do[bool](ctx, gs.s.client, http.MethodPost, fmt.Sprintf("%s/groups/%d/subscribers/assign", gs.s.basePath, groupID), nil, req)
 	return data, err
 }
 
 // UnassignSubscribers removes subscribers from a group by their IDs.
-func (gs *GroupService) UnassignSubscribers(ctx context.Context, groupID int, req *GroupAssignRequest) ([]Subscriber, error) {
-	data, _, err := gomiak.Do[[]Subscriber](ctx, gs.s.client, http.MethodPost, fmt.Sprintf("%s/groups/%d/subscribers/unassign", gs.s.basePath, groupID), nil, req)
+func (gs *GroupService) UnassignSubscribers(ctx context.Context, groupID int, req *GroupAssignRequest) (bool, error) {
+	data, _, err := gomiak.Do[bool](ctx, gs.s.client, http.MethodPost, fmt.Sprintf("%s/groups/%d/subscribers/unassign", gs.s.basePath, groupID), nil, req)
 	return data, err
 }
