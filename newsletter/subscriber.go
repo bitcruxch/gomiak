@@ -136,8 +136,13 @@ func (ss *SubscriberService) List(ctx context.Context, opts *gomiak.ListOptions)
 }
 
 // Get returns a single subscriber by ID.
-func (ss *SubscriberService) Get(ctx context.Context, id int) (*Subscriber, error) {
-	s, _, err := gomiak.Do[*Subscriber](ctx, ss.s.client, http.MethodGet, fmt.Sprintf("%s/subscribers/%d", ss.s.basePath, id), nil, nil)
+// Use optional query parameters to include related data, e.g. url.Values{"with": {"groups"}}.
+func (ss *SubscriberService) Get(ctx context.Context, id int, params ...url.Values) (*Subscriber, error) {
+	var qp url.Values
+	if len(params) > 0 {
+		qp = params[0]
+	}
+	s, _, err := gomiak.Do[*Subscriber](ctx, ss.s.client, http.MethodGet, fmt.Sprintf("%s/subscribers/%d", ss.s.basePath, id), qp, nil)
 	return s, err
 }
 
