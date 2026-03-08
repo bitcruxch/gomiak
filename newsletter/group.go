@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/bitcrux/gomiak"
+	"github.com/bitcruxch/gomiak"
 )
 
 // Group represents a subscriber group.

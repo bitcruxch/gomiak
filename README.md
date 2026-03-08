@@ -7,13 +7,13 @@ A Go client library for the [Infomaniak API](https://developer.infomaniak.com/).
 ## Installation
 
 ```bash
-go get github.com/bitcrux/gomiak
+go get github.com/bitcruxch/gomiak
 ```
 
 To use only the Newsletter client:
 
 ```go
-import "github.com/bitcrux/gomiak/newsletter"
+import "github.com/bitcruxch/gomiak/newsletter"
 ```
 
 Go's module system will only pull the dependencies needed by the packages you import — no unrelated API clients are included.
@@ -30,8 +30,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/bitcrux/gomiak"
-	"github.com/bitcrux/gomiak/newsletter"
+	"github.com/bitcruxch/gomiak"
+	"github.com/bitcruxch/gomiak/newsletter"
 )
 
 func main() {

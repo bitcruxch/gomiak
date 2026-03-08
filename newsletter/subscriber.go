@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/bitcrux/gomiak"
+	"github.com/bitcruxch/gomiak"
 )
 
 // Subscriber represents a newsletter subscriber.

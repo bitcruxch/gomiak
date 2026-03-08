@@ -1,3 +1,3 @@
-module github.com/bitcrux/gomiak
+module github.com/bitcruxch/gomiak
 
 go 1.22

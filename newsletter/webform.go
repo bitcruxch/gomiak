@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/bitcrux/gomiak"
+	"github.com/bitcruxch/gomiak"
 )
 
 // Webform represents a newsletter subscription webform.

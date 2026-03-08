@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/bitcrux/gomiak"
+	"github.com/bitcruxch/gomiak"
 )
 
 // Campaign represents a newsletter campaign.

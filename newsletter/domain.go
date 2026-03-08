@@ -4,7 +4,7 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/bitcrux/gomiak"
+	"github.com/bitcruxch/gomiak"
 )
 
 // Domain represents a newsletter domain.

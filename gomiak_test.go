@@ -7,8 +7,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/bitcrux/gomiak"
-	"github.com/bitcrux/gomiak/newsletter"
+	"github.com/bitcruxch/gomiak"
+	"github.com/bitcruxch/gomiak/newsletter"
 )
 
 func TestClientConstruction(t *testing.T) {

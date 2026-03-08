@@ -4,7 +4,7 @@ package newsletter
 import (
 	"fmt"
 
-	"github.com/bitcrux/gomiak"
+	"github.com/bitcruxch/gomiak"
 )
 
 // Service provides access to the Infomaniak Newsletter API for a specific domain.
